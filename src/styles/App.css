@@ -1,0 +1,249 @@
+.App{
+    width: 100vw;
+    height:100vh;
+}
+body{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    color: white;
+    font-family: "Roboto", sans-serif;
+
+}
+
+.header {
+    padding: 1vh 1vh 1vh 1vh;
+    background: #011627;
+    width:100%;
+    max-height: 10vh;
+    align-items: center;
+    display:flex;
+    justify-content: space-between;
+    position: sticky;
+  } 
+
+.title{
+    cursor:pointer;
+    padding-left: 0%;
+    font-family: "Roboto", sans-serif;
+    color:aliceblue;
+
+    align-items: center;
+    transition:.3s;
+    display:flex;
+    padding: .2%;
+    flex-shrink: 0;
+    min-height: 100%;
+    left: 10%;
+
+
+}
+
+.title:hover{
+    border-radius: 20px;
+    box-shadow: 0 0 11px white;
+}
+h1{
+    width:10px;
+    padding: 0;
+    margin: 0;
+    font-size: 20vh;
+
+}
+
+ .pages {
+    
+    display: flex;
+    justify-content: space-between;
+   
+    width:30%;
+    align-items: center;
+    padding-right: 10vh;
+  }  
+
+
+.sidenav.active{
+    left:0;
+}
+ul{
+    padding :0;
+}
+ul li {
+    list-style-type: none;
+    margin: 10px 0;
+
+}
+
+ul li a{
+    color :whitesmoke;
+    text-decoration: none;
+    font-size:16px;
+    display:block;
+    padding :10px 15px;
+    padding-right: 0px;
+    border-radius: 10px;
+    width: 100%;
+    transition:.3s;
+    
+
+}
+ .title{
+    left: 10%;;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+  
+ }
+.brain{
+    width:10%;
+    left: 10%;
+}
+
+
+
+
+ .header h1{
+    flex:1;
+    padding-left: 5%;
+    margin-top: 2%;
+ }
+
+
+ .main{
+     height: 90vh;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 60px;
+     color: #011627;
+    width:100%;
+    
+ }
+
+
+ .menu-trigger img {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #f5f5f5; /* Light color */
+  box-shadow: 0 2px 4px rgba(200, 0, 0, 0.1);
+}
+.loginglow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #f5f5f5; /* Light color */
+  animation : shadowOnOff 2s linear infinite;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  background-color: #f5f5f5; /* Light color */
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  max-height: 75vh; /* Take no more than 75% of the screen */
+  overflow: auto; /* Add scroll if necessary */
+  text-align: center; /* Center text */
+}
+.dropdown-menu::before{
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: 20px;
+  height: 20px;
+  width: 20px;
+  background: var(--secondary-bg);
+  transform: rotate(45deg);
+}
+
+.dropdown-menu.active{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: var(--speed) ease;
+}
+
+.dropdown-menu.inactive{
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: var(--speed) ease;
+}
+h3 {
+  font-size: 18px;
+  padding: 20px 0;
+  font-weight: 500;
+  color: #333; /* Change text color */
+  line-height: 1.2rem;
+  white-space: nowrap; /* Ensure text is on one line */
+}
+
+h3 span {
+  font-size: 14px;
+  color: #777; /* Change secondary text color */
+  font-weight: 400;
+}
+
+.dropdown-menu ul li {
+  padding: 10px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-menu ul li a {
+  color: #333; /* Change text color */
+  transition: color 0.3s ease-in-out, font-weight 0.3s ease-in-out; /* Add transition for text color and font-weight */
+}
+
+.dropdown-menu ul li:hover a {
+  color: #d42109; /* Change text color on hover */
+  font-weight: bold; /* Make the text bold on hover */
+  cursor: pointer;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center; /* Center icons vertically */
+  margin: 10px auto;
+}
+
+.dropdownItem img {
+  width: 20px; /* Adjust image size */
+  height: 20px; /* Adjust image size */
+  margin-right: 10px;
+  opacity: 0.5;
+}
+
+.dropdownItem a {
+  max-width: 100px;
+  color: #333; /* Change text color */
+  transition: color 0.3s ease-in-out;
+}
+
+
+
+
+
+@keyframes shadowOnOff {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0); /* Initial and final shadow */
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(150, 0, 250, 20); /* Intermediate shadow */
+  }
+}

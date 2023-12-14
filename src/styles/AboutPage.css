@@ -1,0 +1,180 @@
+
+
+.about-page-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh; /* Ensure the container covers the entire viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.scroll-down-prompt {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #fff;
+  border-right: none;
+  border-bottom: none;
+  transform: rotate(-45deg);
+  animation: animateScrollPrompt 2s infinite;
+}
+
+
+.futuristic-section {
+  scroll-snap-align: start;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.futuristic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+.futuristic-element {
+  width: 300px;
+  height: 300px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.futuristic-panel {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  max-width: 300px;
+  margin-bottom: 20px; /* Add margin to create separation between panels */
+}
+
+.neon-button-container {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px; /* Add margin to create space between sections */
+}
+
+.neon-button {
+  padding: 16px 32px;
+  font-size: 1.4rem;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #0ff;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s, background-color 0.4s;
+}
+
+.neon-button::before {
+  content: "";
+  position: absolute;
+  background: #0ff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: 300%;
+  height: 300%;
+}
+
+.neon-button:hover {
+  color: #111;
+  background-color: #0ff;
+}
+
+.neon-button:hover::before {
+  transition: all 0.6s;
+  width: 0;
+  height: 0;
+}
+
+.about-page-container {
+  height: 100vh;
+  overflow: hidden; /* Hide the scroll bar */
+  position: relative;
+}
+
+.full-screen-content {
+  height: 100%;
+  overflow-y: auto; /* Add scroll functionality for the entire page */
+}
+
+/* Rest of your existing styles */
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Disable browser scrolling */
+  top:100px;
+}
+
+/* The following styles ensure that the about-page-container takes up the entire viewport height and width */
+
+.about-page-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow: auto; /* Enable scrolling for the entire page */
+  scroll-snap-type: y mandatory;
+  scroll-padding: 40px; /* Ensure proper scrolling padding */
+}
+
+.futuristic-section {
+  scroll-snap-align: start;
+  padding: 80px 0;
+  text-align: center;
+  flex-shrink: 0; /* Prevent the section from shrinking in size */
+}
+
+/* Rest of your existing styles */
+
+/* The following styles ensure the scroll down prompt is fixed to the bottom of the screen */
+
+.scroll-down-prompt {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Disable browser scrolling */
+}
+
+.about-page-container {
+  height: calc(100vh - 100px); /* Adjust for the header height (assuming 100px) */
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow: auto; /* Enable scrolling for the entire page */
+  scroll-snap-type: y mandatory;
+  scroll-padding: 40px; /* Ensure proper scrolling padding */
+}
+
+.full-screen-content {
+  flex: 1; /* Fill remaining space */
+  overflow-y: auto; /* Add scroll functionality for the entire page */
+}
+
+/* Rest of your existing styles */
+
+/* The following styles ensure the scroll down prompt is fixed to the bottom of the screen */
+
+.scroll-down-prompt {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
